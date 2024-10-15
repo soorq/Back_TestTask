@@ -1,0 +1,28 @@
+{
+  "name": "typescript-node-template",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:witt3rd/typescript-node-template.git"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc-watch --noClear --onSuccess 'node dist/index.js'"
+  },
+  "keywords": [],
+  "author": "Donald Thompson (donald@witt3rd.com)",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^13.11.1",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^2.0.4",
+    "tsc-watch": "^4.2.3",
+    "typescript": "^3.8.3"
+  }
+}
