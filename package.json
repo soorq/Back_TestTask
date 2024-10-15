@@ -1,28 +1,48 @@
 {
-  "name": "typescript-node-template",
-  "version": "1.0.0",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:witt3rd/typescript-node-template.git"
-  },
-  "scripts": {
-    "build": "tsc -b",
-    "dev": "tsc-watch --noClear --onSuccess 'node dist/index.js'"
-  },
-  "keywords": [],
-  "author": "Donald Thompson (donald@witt3rd.com)",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-    "@types/node": "^13.11.1",
-    "@typescript-eslint/eslint-plugin": "^2.27.0",
-    "@typescript-eslint/parser": "^2.27.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^2.0.4",
-    "tsc-watch": "^4.2.3",
-    "typescript": "^3.8.3"
-  }
+	"name": "test-task",
+	"version": "1.0.0",
+	"description": "",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:soorq/Back_TestTask.git"
+	},
+	"scripts": {
+		"start": "node ./src/index.ts",
+		"start:dev": "nodemon ./src/index.ts",
+		"build": "tsc --project tsconfig.json",
+		"prepare": "husky install",
+		"check-types": "tsc --pretty --noEmit",
+		"check-format": "prettier --check .",
+		"check-lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+		"format": "prettier --write .",
+		"test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build",
+		"deps:check": "npx depcruise --config .dependency-cruiser.js src",
+		"deps:graphs": "npx depcruise src --include-only ^src --output-type dot | dot -T svg > ./dependency-ui/graphs.svg"
+	},
+	"keywords": [],
+	"author": "Kawandoki Danil",
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^1.7.7",
+		"dotenv": "^16.4.5",
+		"express": "^4.21.1",
+		"mongoose": "^8.7.1",
+		"node-cron": "^3.0.3",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@types/node": "^13.11.1",
+		"@types/node-cron": "^3.0.11",
+		"@typescript-eslint/eslint-plugin": "^2.27.0",
+		"@typescript-eslint/parser": "^2.27.0",
+		"dependency-cruiser": "^16.4.2",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.10.1",
+		"eslint-plugin-prettier": "^3.1.2",
+		"husky": "^8.0.0",
+		"nodemon": "^3.1.7",
+		"prettier": "^2.0.4",
+		"ts-node": "^10.9.2",
+		"typescript": "^3.8.3"
+	}
 }

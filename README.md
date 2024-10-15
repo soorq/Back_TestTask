@@ -78,14 +78,14 @@ Create an `.eslintrc.js` file in the project root and add the following:
 
 ```javascript
 module.exports = {
-  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
-  extends: [
-    'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-  ],
-  rules: {
-    // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
-    // e.g. "@typescript-eslint/explicit-function-return-type": "off",
-  },
+	parser: '@typescript-eslint/parser', // Specifies the ESLint parser
+	extends: [
+		'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+	],
+	rules: {
+		// Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
+		// e.g. "@typescript-eslint/explicit-function-return-type": "off",
+	},
 };
 ```
 
@@ -103,11 +103,11 @@ Create a `.prettierrc.js` and add the following:
 
 ```javascript
 module.exports = {
-  semi: true,
-  trailingComma: 'all',
-  singleQuote: true,
-  printWidth: 120,
-  tabWidth: 2,
+	semi: true,
+	trailingComma: 'all',
+	singleQuote: true,
+	printWidth: 120,
+	tabWidth: 2,
 };
 ```
 
@@ -128,15 +128,15 @@ Create a `src` directory and an `index.ts` file in it with the following code:
 
 ```typescript
 class Dog {
-  name: string;
-  constructor(data: string) {
-    this.name = data;
-  }
+	name: string;
+	constructor(data: string) {
+		this.name = data;
+	}
 }
 
 const dog = new Dog('Rover');
 if (dog instanceof Dog) {
-  console.log(`${dog.name} is a dog`);
+	console.log(`${dog.name} is a dog`);
 }
 ```
 
