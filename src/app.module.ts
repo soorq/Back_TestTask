@@ -1,6 +1,6 @@
 import { AppService } from './app.service';
 import { Logger } from './utils/logger';
-import cron from 'node-cron';
+import { schedule } from 'node-cron';
 
 export class AppModule {
 	private appService: AppService;
@@ -12,7 +12,7 @@ export class AppModule {
 
 	private initializeCronJobs() {
 		// Запускаем каждые 60 секунд
-		cron.schedule('* * * * *', () => {
+		schedule('* * * * *', () => {
 			Logger.success('Запускаем запрос данных EOS API...');
 			this.appService.fetchDataEos();
 		});
